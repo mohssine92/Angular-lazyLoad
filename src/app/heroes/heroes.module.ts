@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 // se va usar solamente en este modulo
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
 
 // Router configuracion / carga perizoza : por demanda , de routas a nivel interio , conocidos rutas hijas
 import { HeroesRoutingModule } from './heroes-routing.module';
+
 
 
 // Components propios
@@ -14,6 +16,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { HeroeComponent } from './pages/heroe/heroe.component';
+
 
 
 
@@ -29,6 +32,7 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
   imports: [
     CommonModule,
     FlexLayoutModule,
+    MaterialModule,
     HeroesRoutingModule
   ]
 })
