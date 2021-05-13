@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// se va usar solamente en este modulo
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Router configuracion / carga perizoza : por demanda , de routas a nivel interio , conocidos rutas hijas
 import { HeroesRoutingModule } from './heroes-routing.module';
@@ -26,6 +28,7 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
   ],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     HeroesRoutingModule
   ]
 })
