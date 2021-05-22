@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';               /* seccion : 13: */
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';

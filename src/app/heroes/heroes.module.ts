@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 // se va usar solamente en este modulo
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -17,6 +19,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+
+
+// Pipes Perzonalzados
+import { ImagenPipe } from './pipes/imagen.pipe';
+
 
 
 
@@ -27,13 +35,16 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
     BuscarComponent,
     HomeComponent,
     ListadoComponent,
-    HeroeComponent
+    HeroeComponent,
+    HeroeTarjetaComponent,
+    ImagenPipe
   ],
   imports: [
     CommonModule,
     FlexLayoutModule,
     MaterialModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    FormsModule
   ]
 })
 export class HeroesModule { }
