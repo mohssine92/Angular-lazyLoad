@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  // declaro las rutas de mi entorno , las rutas que voy a consumir sus Apis en cualquier servidor estoy
   baseUrl: 'http://localhost:3004'
 };
 

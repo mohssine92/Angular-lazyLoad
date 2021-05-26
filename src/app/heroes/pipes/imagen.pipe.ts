@@ -1,4 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
+
+// Interfaz
 import { Heroe } from '../pages/interfaces/heroes.interface';
 
 @Pipe({
