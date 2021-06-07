@@ -40,6 +40,20 @@ export class HeroesService {
     // coincidencia aprox en todas las props de todo objetos existen en la coleccion del modelo
   }
 
+  agregarHeroe( heroe: Heroe ): Observable<Heroe> { // recibe objeto lleno y validado para insertar a DB
+    return this.http.post<Heroe>(`${ this.baseUrl }/heroes`, heroe );
+  }
+
+  actualizarHeroe( heroe: Heroe ): Observable<Heroe> {
+    return this.http.put<Heroe>(`${ this.baseUrl }/heroes/${ heroe.id }`, heroe );
+  }
+
+  borrarHeroe( id: string ): Observable<any> { // esta Regresando objecto vacio , puedo crear una interfaz para objeto vacio .
+    return this.http.delete<any>(`${ this.baseUrl }/heroes/${ id }`);
+  }
+
+
+
 
 
 }

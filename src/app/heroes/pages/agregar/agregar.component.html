@@ -1,1 +1,109 @@
-<p>agregar editar works!</p>
+
+<h1>
+
+  <!-- normal si estamos aqui para editar recuperamos ubjeto con desde db - usando expresion js ternario -->
+  <!--el ternario en este jemplo esta haciendo el mismo trabajo de ng if   -->
+
+  {{ (heroe.id) ? 'Edit': 'New' }}
+
+   Hero
+
+   <span>{{ heroe.superhero }}</span>
+</h1>
+
+<div fxLayout="row"
+     fxLayoutGap="40px"
+     fxLayout.xs="column">
+
+     <!-- el formulario usado es simple de angular NgModel : caja de bananas  -->
+    <div fxFlex="50"  fxLayout="column"> <!-- actua como columna , cajas interior caja por fila -->
+
+      <div fxLayout="row"
+           fxLayout.xs="column"
+           fxLayoutGap="20px">  <!-- es row de 2 col pero en tamno xs = seran 2 cols una bajo de la otra -->
+          <mat-form-field fxFlex="100" fxLayout.xs="column" > <!-- v203 -->
+           <mat-label>Super Héroe</mat-label>
+           <input matInput
+                  type="text"
+                  [(ngModel)]="heroe.superhero"
+                  required>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100" fxLayout.xs="column" > <!-- v203 -->
+            <mat-label>Alter Ego</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="heroe.alter_ego"
+                   required>
+          </mat-form-field>
+      </div>
+
+
+    <div  fxLayout="column">
+      <mat-form-field fxFlex="100">
+        <mat-label>Primera Aparición</mat-label>
+        <input matInput
+               type="text"
+               [(ngModel)]="heroe.first_appearance"
+               required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Personajes</mat-label>
+        <input matInput
+               type="text"
+               [(ngModel)]="heroe.characters"
+               required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Creador</mat-label>
+        <mat-select [(ngModel)]="heroe.publisher"
+                    required> <!-- impotacion en module materia + selector --> <!-- parece creador declarado por defecto en el objeto en la class del componete -->
+          <mat-option *ngFor="let publisher of publishers"  [value]="publisher.id">
+             {{ publisher.desc }}
+          </mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Foto Url</mat-label>
+        <input matInput
+               type="url"
+               [(ngModel)]="heroe.alt_img"
+               required>
+      </mat-form-field>
+
+      <br>
+
+      <div  fxLayout="row"> <!-- botones -->
+        <button mat-raised-button
+                color="accent"
+                (click)="guardar()" >
+            <mat-icon>edit</mat-icon>  {{ (heroe.id) ? 'Edit': 'Create' }}
+        </button>
+
+        <span class="spacer"></span>     <!-- recordaran que esta class la hemos creado nosotros , le decimos que tome todo espacio sobrante -->
+
+        <button *ngIf="heroe.id"
+                mat-raised-button
+                (click)="borrarHeroe()"
+                color="warn"
+               >
+            <mat-icon>remove</mat-icon>  delete
+        </button>
+      </div>
+
+    </div>
+
+
+    </div>
+
+    <div fxFlex="50"> <!-- podemos mejora posicionamiento en xs sera esta col en posicion 1  -->
+       <img [src]=" heroe | imagen ">  <!--http://localhost:4200/assets/heroes/undefined.jpg -->
+    </div>  <!-- :lenghth ver video 163 -->
+
+
+
+</div>

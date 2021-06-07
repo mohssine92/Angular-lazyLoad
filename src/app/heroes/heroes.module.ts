@@ -22,10 +22,12 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
 
 // Componentes cubran elementos
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 
 
 // Pipes Perzonalzados
 import { ImagenPipe } from './pipes/imagen.pipe';
+
 
 
 
@@ -39,7 +41,9 @@ import { ImagenPipe } from './pipes/imagen.pipe';
     ListadoComponent,
     HeroeComponent,
     HeroeTarjetaComponent,
-    ImagenPipe
+    ImagenPipe,
+    ConfirmarComponent
+
   ],
   imports: [
     CommonModule,

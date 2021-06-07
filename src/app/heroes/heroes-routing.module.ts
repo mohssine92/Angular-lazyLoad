@@ -21,11 +21,11 @@ const routes: Routes = [
       },
       {
         path: 'agregar',
-        component: AgregarComponent
+        component: AgregarComponent // observamos 2 rutas diferentes caragan mismo componente
       },
       {
         path: 'editar/:id',
-        component:AgregarComponent
+        component:AgregarComponent // observamos 2 rutas diferentes caragan mismo componente
       },
       {
         path: 'buscar',

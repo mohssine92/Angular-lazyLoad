@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Heroe } from '../../pages/interfaces/heroes.interface';
 
@@ -14,7 +14,7 @@ import { Heroe } from '../../pages/interfaces/heroes.interface';
 
 
 })
-export class HeroeTarjetaComponent {
+export class HeroeTarjetaComponent   {
 
   // recibir data del componente padre para consumir dentro de este componente
   @Input() heroe!: Heroe;

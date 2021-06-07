@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
 
-const rourtes: Routes = [
+const routes: Routes = [
    {
      // si alguien navigue a tal routa , Cargue el modulo respectivo , recien configurado Routing a nivel interior en tal Module que se va cargar
      // auth es el prefijo para rutas de autenticacion , realmente se carga el modulo  que a su vez carga un componente por defecto
@@ -28,7 +28,7 @@ const rourtes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot( rourtes )
+    RouterModule.forRoot( routes )
   ],
   exports: [
     RouterModule
