@@ -50,7 +50,7 @@ const routes: Routes = [
 @NgModule({
 
   imports: [
-    RouterModule.forChild( routes )
+    RouterModule.forChild( routes ) // esta funcion cuando se trata de rutas hijas .
   ],
   exports: [
     RouterModule
